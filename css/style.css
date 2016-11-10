@@ -9,20 +9,101 @@ body {
   margin-left: 30px;
 }
 
+
+.hvr-fade {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  overflow: hidden;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+}
+.hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
+  background-color: #5cdcfb;
+  color: white;
+}
+
+.totalForm{
+  width: 100%;
+  padding: 3%;
+}
+.moneyForm{
+  width: 100%;
+  border: 1px solid #5cdcfb;
+  margin-bottom: 1%;
+}
+
+
 #navTextRight{
   margin: 0;
 }
 .goalImgWithText{
-  padding: 25px;
-
+  margin-top: 23px;
 }
+.moneyButtDiv{
+    text-align: center;
+  }
+
+.groupGoalDiv{
+  padding-left: 5%;
+}
+
+/*.goalDescription{
+  max-width: 500px;
+}*/
 .goalImage{
   border: 12px double #5cdcfb;
   max-width: 100%;
   float: left;
   margin-right: 20px;
 }
+.groupIcon{
+  float: left;
+}
+/*.moneyForm{
+min-width: 300px;*/
+.piggyRow{
+  margin-top: 4%;
+  margin-left: 17%;
+  margin-bottom: 4%;
+}
+#donateTitle{
+  padding: 24px;
+}
+.moneyButtons{
+  background-color: #045c71;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: white;
+  border-radius: 5px;
+  margin-right: 2%;
+  border: 2px solid #5cdcfb;
+}
+#donateButton{
+    background-color: #32c8ec;
+    border: none;
+    color: #ffffff;
+    font-size: 27px;
+    font-weight: bold;
+}
 
+
+#groupGoalTitle{
+  display: inline-block;
+  font-family: 'Lobster', cursive;
+  background-color: #045c71;
+  padding-top: 15px;
+  padding-right: 49px;
+  padding-bottom: 15px;
+  padding-left: 41px;
+  margin-top: 14%;
+}
 .goalDiv{
   text-align: left;
 }
@@ -31,6 +112,15 @@ h3{
   font-family: 'Lobster', cursive;
   color: #f05b47;
 
+}
+#goalText{
+  float: left;
+  margin-left: 10px;
+  color: white;
+  font-size: 24px;
+  line-height: .3;
+  color: #5cdcfb;
+  letter-spacing: .5px;
 }
 
 .navbar-inverse {
@@ -54,6 +144,7 @@ h3{
   float: none;
   margin-right: 7px;
 }
+
 .navbar-collapse {
   border-top: 1px solid transparent;
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
@@ -80,6 +171,7 @@ h3{
   display:block !important;
 }
 
+
 @media screen and (max-width: 768px){
   body {
    padding-top:107px;
@@ -99,8 +191,13 @@ h3{
   #signIn{
     margin-left: 30px;
   }
-.goalImage{
-  float: none;
-}
+  .goalImage{
+    float: none;
+  }
+  
+   .goalDiv{
+    text-align: center;
+   }
+  
 }
 

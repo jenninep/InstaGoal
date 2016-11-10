@@ -37,26 +37,57 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 text-center goalImgWithText">
-				<div class="goalDiv">
-				 	<img class= "goalImage" src="css/images/skiTrip.png" alt="goalImage">
-				 	<div>
-					 	<h3>Mount Everest Ski Trip</h3>
-					 	<p class="goalDescription" >Hi Mom : ) As you know I have been dreaming of a ski trip to Mount Everest since birth!
-						So I was thinking, what an awesome graduation present this would be!</p> 
+			<div class="col-sm-7 goalImgWithText">
+				<div class="row">
+					<div class="goalDiv">
+					 	<img class= "goalImage" src="css/images/skiTrip.png" alt="goalImage">
+					 	<div>
+						 	<h3>Mount Everest Ski Trip</h3>
+						 	<p class="goalDescription" >Hi Mom : ) As you know I have been dreaming of a ski trip to Mount Everest since birth!
+							So I was thinking, what an awesome graduation present this would be!</p> 
+						</div>
 					</div>
 				</div>
-			</div>
-
-			<div class="col-md-4">
-				<div>
-					<h4> hello</h4>
+				<div class="row piggyRow">
+					<div class="media">
+					  <div class="media-left">
+					    <a href="#">
+					      <img class="media-object" src="css/images/piggy.png" alt="piggy">
+					    </a>
+					  </div>
+					  <div class="media-body">
+					    <h3 id="donateTitle" class="media-heading">Ready To Donate?</h3>
+					  </div>
+					</div>
 				</div>
 				
+				<div class="row moneyButtDiv">
+					<div>
+						<button class="moneyButtons hvr-fade">$10</button>
+						<button class="moneyButtons hvr-fade">$25</button>
+						<button class="moneyButtons hvr-fade">$50</button>
+						<button class="moneyButtons hvr-fade">$100</button>
+						<button class="moneyButtons hvr-fade">$250</button>
+						<button class="moneyButtons hvr-fade">other</button>
+					</div>
+					<div class="totalForm">
+						<form action="demo_form.asp">
+							<input  class="moneyForm " id="totalDonation" type="text" name="totalDonation"  value="Total:"><br>
+							<textarea  class="moneyForm" id="commentBox" type="text" name="commentBox" rows="4" placeholder="Leave a comment" value=""></textarea><br>
+							<input id="donateButton" class="totalForm" type="submit" value="Donate Now">
+						</form>
+					</div>
+				</div>	
+			</div>
+
+			<div class="col-sm-4 groupGoalDiv">
+				<div id="groupGoalTitle">
+					<img class= "groupIcon" src="css/images/group.png" alt="goalImage">
+					<h4 id="goalText">Group Goal</h4>
+				</div>
 			</div>
 		</div>
 	</div>
-
 
 </body>
 </html>
