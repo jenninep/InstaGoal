@@ -1,15 +1,36 @@
 body {
-  padding-top:70px;
+  padding-top:107px;
 }
 #logo{
   font-family: 'Lobster', cursive;
   color: #5cdcfb;
   font-size: 43px;
   letter-spacing: 1.3px;
+  margin-left: 30px;
 }
 
 #navTextRight{
   margin: 0;
+}
+.goalImgWithText{
+  padding: 25px;
+
+}
+.goalImage{
+  border: 12px double #5cdcfb;
+  max-width: 100%;
+  float: left;
+  margin-right: 20px;
+}
+
+.goalDiv{
+  text-align: left;
+}
+
+h3{
+  font-family: 'Lobster', cursive;
+  color: #f05b47;
+
 }
 
 .navbar-inverse {
@@ -17,7 +38,7 @@ body {
     border-color: #5cdcfb;
   }
 .navbar-header .navbar-right{
-  margin-right: 0;
+  margin-right: 5%;
 }
 .navbar-header {
   float: none;
@@ -31,7 +52,7 @@ body {
   display: inline-block;
   border: none;
   float: none;
-  margin-right: 9px;
+  margin-right: 7px;
 }
 .navbar-collapse {
   border-top: 1px solid transparent;
@@ -57,5 +78,29 @@ body {
 }
 .collapse.in{
   display:block !important;
+}
+
+@media screen and (max-width: 768px){
+  body {
+   padding-top:107px;
+  }
+}
+
+@media screen and (max-width: 414px){
+  body {
+   padding-top:120px;
+  }
+  .navbar-header {
+    padding-top: 16px;
+    padding-right: 14px;
+    padding-bottom: 7px;
+    padding-left: 14px;
+  }  
+  #signIn{
+    margin-left: 30px;
+  }
+.goalImage{
+  float: none;
+}
 }
 
