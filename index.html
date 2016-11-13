@@ -4,17 +4,11 @@
 	<title>InstaGoal</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<link rel="stylesheet/less" type="text/css" href="styles.less" />
-<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.min.js"></script>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-
-
-
 
 </head>
 <body>
@@ -134,33 +128,51 @@
 					    		<img class="groupMembers" id="mem4" src="css/images/member4.png" alt="member 4">
 				    		</a>
 			    		</div>
-					</div>
-
-					<div class="radial-progress" data-progress="0">
-						<div class="circle">
-							<div class="mask full">
-								<div class="fill"></div>
+			    		<div>
+			    			<h1 id="percentageAmount">$3,938 <span id="goalCost"> of $5,000</span></h1>
+			    		</div>
+			    		<div>
+			    			<div class="media">
+							  <div class="media-left">
+							    <canvas id="percentageCircle" width="150" height="150"></canvas>
+							  </div>
+							  <div class="media-body">
+							    <h2 class="media-heading">8 <span class="percentageText">Contributers</span></h2>
+							    ...
+							  </div>
 							</div>
-							<div class="mask half">
-								<div class="fill"></div>
-								<div class="fill fix"></div>
-							</div>
-						<div class="shadow"></div>
+			    		</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<script>
-	$('head style[type="text/css"]').attr('type', 'text/less');
-less.refreshStyles();
-window.randomize = function() {
-	$('.radial-progress').attr('data-progress', Math.floor(Math.random() * 100));
-}
-setTimeout(window.randomize, 200);
-$('.radial-progress').click(window.randomize);
-</script>
-
+		var ctx = document.getElementById('percentageCircle').getContext('2d');
+		var al = 0;
+		var start = 4.72;
+		var cw = ctx.canvas.width;
+		var ch = ctx.canvas.height;
+		var diff;
+		function progressSim(){
+			diff = ((al / 100) * Math.PI*2*10).toFixed(2);
+			ctx.clearRect(0, 0, cw, ch);
+			ctx.lineWidth = 15;
+			ctx.fillStyle = '#045c71';
+			ctx.strokeStyle = '#0ac7f5';
+			ctx.textAlign = 'center';
+			ctx.font="19px Helvetica";
+			ctx.fillText(al+'%', cw*.5, ch* .5, cw);
+			ctx.beginPath();
+			ctx.arc(70, 70, 60, start, diff/10+start, false);
+			ctx.stroke();
+			if(al >= 78){
+				clearTimeout(sim);
+			}
+			al++;
+		}
+		var sim =  setInterval(progressSim, 50);
+	</script>
 
 </body>
 </html>
