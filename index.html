@@ -37,7 +37,7 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-7 goalImgWithText">
+			<div class="col-md-7 goalImgWithText">
 				<div class="goalDiv">
 					<div>
 					 	<img class= "goalImage" src="css/images/skiTrip.png" alt="goalImage">
@@ -61,8 +61,8 @@
 					</div>
 				</div>
 				
-				<div class="row moneyButtDiv">
-					<div>
+				<div class="row ">
+					<div class="moneyButtDiv">
 						<button class="moneyButtons hvr-fade">$10</button>
 						<button class="moneyButtons hvr-fade">$25</button>
 						<button class="moneyButtons hvr-fade">$50</button>
@@ -74,13 +74,13 @@
 						<form action="demo_form.asp">
 							<input  class="moneyForm " id="totalDonation" type="text" name="totalDonation"  value="Total:"><br>
 							<textarea  class="moneyForm" id="commentBox" type="text" name="commentBox" rows="4" placeholder="Leave a comment" value=""></textarea>
-							<button id="donateButton" class="totalForm" type="submit">Donate Now</button>
+							<button id="donateButton" class="totalForm hvr-border-fade" type="submit">Donate Now</button>
 						</form>
 					</div>
 				</div>	
 			</div>
 
-			<div class="col-sm-5 groupGoalDiv">
+			<div class="col-md-4 groupGoalDiv">
 				<div id="groupGoalTitle">
 					<img class= "groupIcon" src="css/images/group.png" alt="goalImage">
 					<h4 id="goalText">Group Goal</h4>
@@ -96,22 +96,15 @@
 					  <div class="media-body">
 					    <h5 id="profileInfo" class="media-heading">Goal Organizer:</h5>
 					    <a href="#">
-					    	<span id="envelope" class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+					    	<span id="envelope" class="glyphicon glyphicon-envelope hvr-grow" aria-hidden="true"></span>
 				    	</a>Marsala Smith<br>
 				    	<a href="#">
-					    	<span id="envelope" class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+					    	<span id="envelope" class="glyphicon glyphicon-map-marker hvr-grow " aria-hidden="true"></span>
 				    	</a>Staten Island, NY<br>
 					    <a href="#">	
-					    	<span id="envelope" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+					    	<span id="envelope" class="glyphicon glyphicon-ok hvr-grow" aria-hidden="true"></span>
 				    	</a>Completed Goals: 93%<br>
-				    	<div class="socialMedia">
-					    	<a href="#">
-					    		<img id="fbIcon" src="css/images/fb.png" alt="fbIcon">
-				    		</a>
-				    		<a href="#">
-					    		<img id="googleIcon" src="css/images/google.png" alt="googleIcon">
-				    		</a>
-			    		</div>
+				    	
 		    		  </div>
 			    		<div class="membersDiv">
 			    			<h5 id="groupParticipants">Group Participants: </h5>
@@ -128,17 +121,26 @@
 					    		<img class="groupMembers" id="mem4" src="css/images/member4.png" alt="member 4">
 				    		</a>
 			    		</div>
-			    		<div>
-			    			<h1 id="percentageAmount">$3,938 <span id="goalCost"> of $5,000</span></h1>
-			    		</div>
-			    		<div>
+			    		<div class="goalStatistics">
+				    		<div>
+				    			<h1 id="percentageAmount">$3,938 <span id="goalCost"> of $5,000</span></h1>
+				    		</div>
+			    		
 			    			<div class="media">
 							  <div class="media-left">
 							    <canvas id="percentageCircle" width="150" height="150"></canvas>
 							  </div>
 							  <div class="media-body">
 							    <h2 class="media-heading">8 <span class="percentageText">Contributers</span></h2>
-							    ...
+							    <h2 class="media-heading">39 <span class="percentageText">Days Left</span></h2>
+					    		<div class="socialMedia">
+				    				<a href="#">
+				    					<img id="fbIcon" class="hvr-grow " src="css/images/fb.png" alt="fbIcon">
+			    					</a>
+						    		<a href="#">
+							    		<img id="googleIcon" class="hvr-grow" src="css/images/google.png" alt="googleIcon">
+						    		</a>
+		    					</div>
 							  </div>
 							</div>
 			    		</div>
