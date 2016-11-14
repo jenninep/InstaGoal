@@ -69,6 +69,10 @@
 						<button class="moneyButtons hvr-fade">$100</button>
 						<button class="moneyButtons hvr-fade">$250</button>
 						<button class="moneyButtons hvr-fade">other</button>
+						<div id="otherAmountDiv">
+							<input id="otherDonation" type="text" name="totalDonation"  value="Other Amount: $"><br>
+							<button id="otherAmountButt hvr-fade">Submit</button>
+						</div>
 					</div>
 					<div class="totalForm">
 						<form action="demo_form.asp">
@@ -174,6 +178,16 @@
 			al++;
 		}
 		var sim =  setInterval(progressSim, 50);
+			$("#otherAmountButt").click(function(){
+				$('#otherAmountDiv').show();
+
+			})
+			$("#otherAmountButt").click(function(){
+				console.log('clicked button');
+	    		$('#otherAmountDiv').hide();
+
+		    
+		})
 	</script>
 
 </body>
