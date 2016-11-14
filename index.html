@@ -68,17 +68,17 @@
 						<button class="moneyButtons hvr-fade">$50</button>
 						<button class="moneyButtons hvr-fade">$100</button>
 						<button class="moneyButtons hvr-fade">$250</button>
-						<button class="moneyButtons hvr-fade">other</button>
+						<button id="otherAmountButt" class="moneyButtons hvr-fade">other</button>
 						<div id="otherAmountDiv">
 							<input id="otherDonation" type="text" name="totalDonation"  value="Other Amount: $"><br>
-							<button id="otherAmountButt hvr-fade">Submit</button>
+							<button id="otherAmountSubmit" type="button" class="hvr-fade">Submit</button>
 						</div>
 					</div>
 					<div class="totalForm">
 						<form action="demo_form.asp">
 							<input  class="moneyForm " id="totalDonation" type="text" name="totalDonation"  value="Total:"><br>
 							<textarea  class="moneyForm" id="commentBox" type="text" name="commentBox" rows="4" placeholder="Leave a comment" value=""></textarea>
-							<button id="donateButton" class="totalForm hvr-border-fade" type="submit">Donate Now</button>
+							<button id="donateButton" class="totalForm hvr-float" type="submit">Donate Now</button>
 						</form>
 					</div>
 				</div>	
@@ -100,13 +100,13 @@
 					  <div class="media-body">
 					    <h5 id="profileInfo" class="media-heading">Goal Organizer:</h5>
 					    <a href="#">
-					    	<span id="envelope" class="glyphicon glyphicon-envelope hvr-grow" aria-hidden="true"></span>
+					    	<span id="envelope" class="glyphicon glyphicon-envelope hvr-wobble-horizontal" aria-hidden="true"></span>
 				    	</a>Marsala Smith<br>
 				    	<a href="#">
-					    	<span id="envelope" class="glyphicon glyphicon-map-marker hvr-grow " aria-hidden="true"></span>
+					    	<span id="envelope" class="glyphicon glyphicon-map-marker hvr-wobble-horizontal" aria-hidden="true"></span>
 				    	</a>Staten Island, NY<br>
 					    <a href="#">	
-					    	<span id="envelope" class="glyphicon glyphicon-ok hvr-grow" aria-hidden="true"></span>
+					    	<span id="envelope" class="glyphicon glyphicon-ok hvr-wobble-horizontal" aria-hidden="true"></span>
 				    	</a>Completed Goals: 93%<br>
 				    	
 		    		  </div>
@@ -139,10 +139,10 @@
 							    <h2 class="media-heading">39 <span class="percentageText">Days Left</span></h2>
 					    		<div class="socialMedia">
 				    				<a href="#">
-				    					<img id="fbIcon" class="hvr-grow " src="css/images/fb.png" alt="fbIcon">
+				    					<img id="fbIcon" class="hvr-wobble-horizontal" src="css/images/fb.png" alt="fbIcon">
 			    					</a>
 						    		<a href="#">
-							    		<img id="googleIcon" class="hvr-grow" src="css/images/google.png" alt="googleIcon">
+							    		<img id="googleIcon" class="hvr-wobble-horizontal" src="css/images/google.png" alt="googleIcon">
 						    		</a>
 		    					</div>
 							  </div>
@@ -153,7 +153,8 @@
 			</div>
 		</div>
 	</div>
-	<script>
+	<script>	
+
 		var ctx = document.getElementById('percentageCircle').getContext('2d');
 		var al = 0;
 		var start = 4.72;
@@ -178,16 +179,13 @@
 			al++;
 		}
 		var sim =  setInterval(progressSim, 50);
-			$("#otherAmountButt").click(function(){
-				$('#otherAmountDiv').show();
 
-			})
+		$('#otherAmountDiv').hide();
 			$("#otherAmountButt").click(function(){
 				console.log('clicked button');
-	    		$('#otherAmountDiv').hide();
-
-		    
-		})
+	    		$('#otherAmountDiv').fadeToggle("fast");
+			});
+			
 	</script>
 
 </body>
